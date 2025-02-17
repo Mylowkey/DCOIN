@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCOIN</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class ="mains">
+         <ul id = "sideNav">    <!-- HAMBURGER MENU -->
+            <li><a href="#" id="close"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="">DCOIN</a></li>
+            <li><a href="">Prices</a></li>
+            <li><a href="">Credit Card</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Institutions</a></li>
+            <li><a href="">Resources</a></li>
+        </ul>
+        <ul id = "main">
+            <li><a href="">DCOIN</a></li>   <!-- MENU -->
+            <li class="hideOnMobile"><a href="">Prices</a></li>
+            <li class="hideOnMobile"><a href="">Credit Card</a></li>
+            <li class="hideOnMobile"><a href="">Products</a></li>
+            <li class="hideOnMobile"><a href="">Institutions</a></li>
+            <li class="hideOnMobile"><a href="">Resources</a></li>
+            <li><a href="#" id="hamburger" ><svg xmlns=svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>    
+    </nav>
+    
+    <main class="converter-container">   <!-- CONVERTER TOOL -->
+
+
+        <div class="input-group">
+            <input type="number" value="1" min="0">
+        </div>
+
+        <div class="input-group" >
+            <select id="crypto-select" id="amount-input">
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="XRP">XRP</option>
+                <option value="USDT">USDT</option>
+                <option value="SOL">SOL</option>
+                <option value="DOGE">DOGE</option>
+                <option value="USDC">USDC</option>
+                <option value="ADA">ADA</option>
+            </select>
+        </div>
+
+        <div class="swap-icon">⇅</div>
+
+        <div class="input-group">
+            <input type="text" value="105098.54" class="converted-amount" id="result-display" readonly>
+        </div>
+
+        <div class="input-group">
+            <select id="to-currency">
+                <option value="USD">USD</option>
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="XRP">XRP</option>
+                <option value="USDT">USDT</option>
+                <option value="SOL">SOL</option>
+                <option value="DOGE">DOGE</option>
+                <option value="USDC">USDC</option>
+                <option value="ADA">ADA</option>
+            </select>
+            
+        </div>
+
+        <div class="last-update">
+            Last update: 6:51 PM, January 26, 2025
+            <button class="refresh-button">Refresh</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="crypto-prices">  <!-- CRYPTO PRICES -->
+            <h2>Cryptocurrency Prices</h2>
+            <div class="crypto-list">
+                <div class="crypto-item">
+                    <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="Bitcoin">
+                    <div class="crypto-info">
+                        <p class="crypto-name">Bitcoin <span>BTCUSD</span></p>
+                        <p class="crypto-price">$104,973.61</p>
+                        <p class="crypto-change positive">+$348.31 (0.33%)</p>
+                    </div>
+                </div>
+                <div class="crypto-item">
+                    <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" alt="Ethereum">
+                    <div class="crypto-info">
+                        <p class="crypto-name">Ether <span>ETHUSD</span></p>
+                        <p class="crypto-price">$3,327.97</p>
+                        <p class="crypto-change positive">+$7.57 (0.23%)</p>
+                    </div>
+                </div>
+                <div class="crypto-item">
+                    <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/52.png" alt="XRP">
+                    <div class="crypto-info">
+                        <p class="crypto-name">XRP <span>XRPUSD</span></p>
+                        <p class="crypto-price">$3.1201</p>
+                        <p class="crypto-change positive">+$0.02906 (0.94%)</p>
+                    </div>
+                </div>
+                <div class="crypto-item">
+                    <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" alt="Tether">
+                    <div class="crypto-info">
+                        <p class="crypto-name">Tether <span>USDTUSD</span></p>
+                        <p class="crypto-price">$0.9998</p>
+                        <p class="crypto-change negative">-$0.00026 (-0.03%)</p>
+                    </div>
+                </div>
+                    <div class="crypto-item">
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png" alt="Solana">
+                        <div class="crypto-info">
+                            <p class="crypto-name">Solana <span>SOLUSD</span></p>
+                            <p class="crypto-price">$104,973.61</p>
+                            <p class="crypto-change positive">+$348.31 (0.33%)</p>
+                        </div>
+                    </div>
+                    <div class="crypto-item">
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/74.png" alt="Dogecoin">
+                        <div class="crypto-info">
+                            <p class="crypto-name">Dogecoin <span>DOGEUSD</span></p>
+                            <p class="crypto-price">$3,327.97</p>
+                            <p class="crypto-change positive">+$7.57 (0.23%)</p>
+                        </div>
+                    </div>
+                    <div class="crypto-item">
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" alt="USD">
+                        <div class="crypto-info">
+                            <p class="crypto-name">USD Coin <span>USDCUSD</span></p>
+                            <p class="crypto-price">$3.1201</p>
+                            <p class="crypto-change positive">+$0.02906 (0.94%)</p>
+                        </div>
+                    </div>
+                    <div class="crypto-item">
+                        <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png" alt="Cardano">
+                        <div class="crypto-info">
+                            <p class="crypto-name">Cardano <span>ADAUSD</span></p>
+                            <p class="crypto-price">$0.9998</p>
+                            <p class="crypto-change negative">-$0.00026 (-0.03%)</p>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="crypto-conversion-section"> <!-- BANNER -->
+            <div class="crypto-conversion-container">
+                <div class="crypto-heading">
+                    Convert the price of<br />bitcoin and other<br />cryptos
+                </div>
+                <p class="crypto-description">
+                    Use our price converter to see the value of<br />
+                    bitcoin and other cryptocurrencies in your<br />currency
+                </p>
+                <div class="crypto-button">Convert now</div>
+            </div>
+        </section>
+
+        
+    </main>
+
+
+
+    
+    <script src="./index.js"></script>
+</body>
+</html>
