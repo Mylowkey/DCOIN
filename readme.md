@@ -48,4 +48,4 @@ Add dark/light mode toggle
 
 Created By
 Emilio Malca
-Free to use - let me know if you make something cool with it!
+Free to use - let me know if it was useful to you.

@@ -62,8 +62,12 @@ nav li:first-child {
 
 }
 
+
+
+
 #sideNav li {
     width: 100%;
+   
 }
 
 #sideNav a {
@@ -78,6 +82,7 @@ nav li:first-child {
 .converter-container {
     width: 90%;
     max-width: 580px;
+    min-width: 366px;
     margin: 80px auto 40px;
     padding: 20px;
     background-color: white;
@@ -88,8 +93,8 @@ nav li:first-child {
 }
 
 
-
 .input-group {
+    width: 90%;
     margin-bottom: 20px;
 }
 
@@ -126,7 +131,7 @@ nav li:first-child {
 
 /* PRICE LIST */
 .crypto-prices {
-    max-width: 400px;
+    max-width: 90%;
     margin: 20px auto;
 }
 
@@ -195,11 +200,11 @@ nav li:first-child {
     text-align: right;
 }
 
-.positive {
+.crypto-change.positive {
     color: #00c853;
 }
 
-.negative {
+.crypto-change.negative {
     color: #ff5252;
 }
 /* Image */

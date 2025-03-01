@@ -17,7 +17,7 @@
             <li><a href="">Institutions</a></li>
             <li><a href="">Resources</a></li>
         </ul>
-        <ul id = "main">
+        <ul id = "mainmenu">
             <li><a href="">DCOIN</a></li>   <!-- MENU -->
             <li class="hideOnMobile"><a href="">Prices</a></li>
             <li class="hideOnMobile"><a href="">Credit Card</a></li>
@@ -32,11 +32,11 @@
 
 
         <div class="input-group">
-            <input type="number" value="1" min="0">
+            <input type="number" id="amount-input" value="1" min="0">
         </div>
 
         <div class="input-group" >
-            <select id="crypto-select" id="amount-input">
+            <select id="crypto-select" class="amount-input">
                 <option value="BTC">BTC</option>
                 <option value="ETH">ETH</option>
                 <option value="XRP">XRP</option>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="last-update">
-            Last update: 6:51 PM, January 26, 2025
+            <span class="update-time">  Last update: 6:51 PM, January 26, 2025 </span>
             <button class="refresh-button">Refresh</button>
         </div>
         <br>
