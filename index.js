@@ -160,10 +160,13 @@ cryptoItems.forEach((item, index) => {
 // Run the update when the page first loads
 updateCryptoList();
 
+const loadingSpinner = document.getElementById('loading-spinner');
+
 // -------------------------------------------------API CALL
 
 function fetchCryptoData() {
-  const options = {method: 'GET', headers: {accept: 'application/json'}};
+  loadingSpinner.style.display = 'flex'; // Show the loading spinner (added later)
+ const options = {method: 'GET', headers: {accept: 'application/json'}};
   fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin,ethereum,ripple,tether,solana,dogecoin,usd-coin,cardano&order=market_cap_desc', options)
   .then(response => {
     // Check if the response is ok
@@ -180,9 +183,12 @@ function fetchCryptoData() {
   const now = new Date();
   document.querySelector('.update-time').textContent = 
       `Last update: ${now.toLocaleTimeString()}, ${now.toLocaleDateString()}`;
+      loadingSpinner.style.display = 'none';
 })
   .catch(error => {
   console.error('Error fetching data:', error);
+  loadingSpinner.style.display = 'none';
+  alert('Failed to update prices. Please try again later.');
   // Show error message to user (we'll add this later)
 });
 }

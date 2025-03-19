@@ -35,7 +35,7 @@
             <input type="number" id="amount-input" value="1" min="0">
         </div>
 
-        <div class="input-group" >
+        <div class="input-group" id="input-1" >
             <select id="crypto-select" class="amount-input">
                 <option value="BTC">BTC</option>
                 <option value="ETH">ETH</option>
@@ -47,10 +47,10 @@
                 <option value="ADA">ADA</option>
             </select>
         </div>
+        <hr class="divider">
+            
 
-        <div class="swap-icon">⇅</div>
-
-        <div class="input-group">
+        <div class="input-group" id="input-2">
             <input type="text" value="105098.54" class="converted-amount" id="result-display" readonly>
         </div>
 
@@ -66,12 +66,18 @@
                 <option value="USDC">USDC</option>
                 <option value="ADA">ADA</option>
             </select>
+
+     </main>
             
         </div>
 
         <div class="last-update">
             <span class="update-time">  Last update: 6:51 PM, January 26, 2025 </span>
             <button class="refresh-button">Refresh</button>
+        </div>
+        <div class="loading-spinner" id="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Updating prices...</p>
         </div>
         <br>
         <br>
@@ -169,8 +175,28 @@
             </div>
         </section>
 
-        
-    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Site Policy</a>
+                <div class="footer-center">
+                    <div>Dcoin Trust Company</div>
+                    <div>Moonbase, LLC NMLS</div>
+                </div>
+                <a href="#">Legal Notice</a>
+            </div>
+            
+            <div class="copyright">
+                © Copyright 2025 Dcoin, LLC or its affiliates.
+            </div>
+            
+            <div class="recaptcha-notice">
+                This site is protected by reCAPTCHA and the <a href="#">Google</a>
+                <div>Privacy Policy and Terms of Service apply.</div>
+            </div>
+        </div>
+    </footer>
 
 
 

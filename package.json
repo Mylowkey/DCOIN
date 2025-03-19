@@ -1,0 +1,15 @@
+{
+  "name": "dcoin",
+  "version": "1.0.0",
+  "description": "DCOIN - Cryptocurrency Price Tracker\r A simple website that shows real-time cryptocurrency prices and lets you convert between different cryptocurrencies.\r Features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
