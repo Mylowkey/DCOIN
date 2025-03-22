@@ -43,7 +43,6 @@ Future Updates
 
 Add more cryptocurrencies
 Add price history graphs
-Add price alerts
 Add dark/light mode toggle
 
 Created By

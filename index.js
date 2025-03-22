@@ -42,8 +42,10 @@ const cryptoSelect = document.getElementById('crypto-select');
 const targetSelect = document.getElementById('to-currency');
 const resultDisplay = document.getElementById('result-display');
 const refreshButton = document.querySelector('.refresh-button'); // using class since it doesn't have ID
+// const themeSwitch = document.getElementById('theme-switch');
 // const swapButton = document.querySelector('.swap-icon'); // using class since it doesn't have ID
-  
+
+
 //---- Convert function
 function convertCurrency() {
   const amount = parseFloat(amountInput.value);
@@ -146,16 +148,6 @@ cryptoItems.forEach((item, index) => {
   });
 }
 
-// When someone clicks the refresh button:
-// refreshButton.addEventListener('click', () => {
-//   // Update all the crypto prices
-//   updateCryptoList();
-  
-//   // Update the "Last updated" time
-//   const now = new Date(); // Get current time
-//   document.querySelector('.update-time').textContent = 
-//       `Last update : ${now.toLocaleTimeString()}, ${now.toLocaleDateString()}`;
-// });
 
 // Run the update when the page first loads
 updateCryptoList();
@@ -226,3 +218,29 @@ refreshButton.addEventListener('click', () => {
 // Fetch data when page loads
 fetchCryptoData();
 
+// Add this at the bottom of your index.js file
+document.addEventListener('DOMContentLoaded', function() {
+  const themeSwitch = document.getElementById('theme-switch');
+  
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  
+  // Apply light theme if saved
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+    themeSwitch.checked = true;
+  } else {
+    themeSwitch.checked = false;
+  }
+  
+  // Toggle theme when switch is clicked
+  themeSwitch.addEventListener('change', function() {
+    if (this.checked) {
+      document.body.classList.add('light-theme');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.body.classList.remove('light-theme');
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+});
