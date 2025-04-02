@@ -42,8 +42,7 @@ const cryptoSelect = document.getElementById('crypto-select');
 const targetSelect = document.getElementById('to-currency');
 const resultDisplay = document.getElementById('result-display');
 const refreshButton = document.querySelector('.refresh-button'); // using class since it doesn't have ID
-// const themeSwitch = document.getElementById('theme-switch');
-// const swapButton = document.querySelector('.swap-icon'); // using class since it doesn't have ID
+
 
 
 //---- Convert function
@@ -68,7 +67,7 @@ cryptoSelect.addEventListener('change', convertCurrency);
 targetSelect.addEventListener('change', convertCurrency);
 
 
-// Refresh button (we'll update this with API call later)
+// Refresh button)
 // refreshButton.addEventListener('click', () => {
 //   convertCurrency();
 //   // Update last update time
@@ -122,11 +121,11 @@ let cryptoData = [
 ];
 
 function updateCryptoList () {
-  // This gets ALL crypto-items (all 8 of them) and stores them in an array
+  //  gets ALL my 8 crypto-items  and stores them in an array
 const cryptoItems = document.querySelectorAll('.crypto-item');
 // forEach goes through each item ONE BY ONE
 cryptoItems.forEach((item, index) => {
-    // index tells us which item we're on (0 for first, 1 for second, etc.)
+    // index tells us which item we're on.
     if (index >= cryptoData.length) return; // Skip this item if there's no matching data
     const crypto = cryptoData[index];  // Gets matching data from our array
         // item is the current crypto-item we're working with
@@ -218,29 +217,27 @@ refreshButton.addEventListener('click', () => {
 // Fetch data when page loads
 fetchCryptoData();
 
-// Add this at the bottom of your index.js file
+
 document.addEventListener('DOMContentLoaded', function() {
   const themeSwitch = document.getElementById('theme-switch');
   
-  // Check for saved theme preference
-  const savedTheme = localStorage.getItem('theme');
-  
-  // Apply light theme if saved
-  if (savedTheme === 'light') {
-    document.body.classList.add('light-theme');
-    themeSwitch.checked = true;
+  // Checks if the element exists
+  if (themeSwitch) {
+    console.log('Found the toggle element!');
+    
+    themeSwitch.addEventListener('change', function() {
+      console.log('Toggle was clicked!');
+      console.log('Checked status:', this.checked);
+      
+      if (this.checked) {
+        console.log('Adding light-theme class');
+        document.body.classList.add('light-theme');
+      } else {
+        console.log('Removing light-theme class');
+        document.body.classList.remove('light-theme');
+      }
+    });
   } else {
-    themeSwitch.checked = false;
+    console.log('Could not find toggle element with ID: theme-switch');
   }
-  
-  // Toggle theme when switch is clicked
-  themeSwitch.addEventListener('change', function() {
-    if (this.checked) {
-      document.body.classList.add('light-theme');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.body.classList.remove('light-theme');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
 });
