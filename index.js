@@ -217,7 +217,7 @@ refreshButton.addEventListener('click', () => {
 // Fetch data when page loads
 fetchCryptoData();
 
-
+// switch not finished yet
 document.addEventListener('DOMContentLoaded', function() {
   const themeSwitch = document.getElementById('theme-switch');
   
